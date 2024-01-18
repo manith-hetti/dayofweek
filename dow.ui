@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DOW</class>
+ <widget class="QMainWindow" name="DOW">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1370</width>
+    <height>903</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DOW</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="dateLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>521</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; font-weight:700;&quot;&gt;someText&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>60</y>
+      <width>1246</width>
+      <height>1000</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>1000</height>
+      </size>
+     </property>
+     <widget class="QPushButton" name="monday">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>70</y>
+        <width>211</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Monday</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="tuesday">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>70</y>
+        <width>211</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Tuesday</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="wednesday">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>210</y>
+        <width>211</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Wednesday</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="thursday">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>200</y>
+        <width>211</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Thursday</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="friday">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>340</y>
+        <width>211</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Friday</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="sunday">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>470</y>
+        <width>211</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sunday</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="helpButton">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>470</y>
+        <width>211</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Help!</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="saturday">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>340</y>
+        <width>211</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Saturday</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="highScoreLabel">
+      <property name="geometry">
+       <rect>
+        <x>960</x>
+        <y>20</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="livesLabel">
+      <property name="geometry">
+       <rect>
+        <x>960</x>
+        <y>80</y>
+        <width>171</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>lives</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="scoreLabel">
+      <property name="geometry">
+       <rect>
+        <x>960</x>
+        <y>140</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>score </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="userResponse">
+      <property name="geometry">
+       <rect>
+        <x>960</x>
+        <y>500</y>
+        <width>171</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>1000</height>
+      </size>
+     </property>
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>1251</width>
+        <height>791</height>
+       </rect>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>-411</y>
+         <width>1235</width>
+         <height>1200</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>1200</height>
+        </size>
+       </property>
+       <widget class="QWidget" name="gridLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>30</y>
+          <width>945</width>
+          <height>1071</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="19" column="0">
+          <widget class="QLabel" name="answerLabel">
+           <property name="text">
+            <string>answerLabel</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QTableWidget" name="centuriesTable">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>245</width>
+             <height>160</height>
+            </size>
+           </property>
+           <property name="autoScroll">
+            <bool>false</bool>
+           </property>
+           <row>
+            <property name="text">
+             <string>1700</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>1800</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>1900</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>2000</string>
+            </property>
+           </row>
+           <column>
+            <property name="text">
+             <string>Doomsday</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Value</string>
+            </property>
+           </column>
+           <item row="0" column="0">
+            <property name="text">
+             <string>Sunday</string>
+            </property>
+            <property name="flags">
+             <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+            </property>
+           </item>
+           <item row="0" column="1">
+            <property name="text">
+             <string>0</string>
+            </property>
+            <property name="flags">
+             <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+            </property>
+           </item>
+           <item row="1" column="0">
+            <property name="text">
+             <string>Friday</string>
+            </property>
+            <property name="flags">
+             <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+            </property>
+           </item>
+           <item row="1" column="1">
+            <property name="text">
+             <string>5</string>
+            </property>
+            <property name="flags">
+             <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+            </property>
+           </item>
+           <item row="2" column="0">
+            <property name="text">
+             <string>Wednesday</string>
+            </property>
+            <property name="flags">
+             <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+            </property>
+           </item>
+           <item row="2" column="1">
+            <property name="text">
+             <string>3</string>
+            </property>
+            <property name="flags">
+             <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+            </property>
+           </item>
+           <item row="3" column="0">
+            <property name="text">
+             <string>Tuesday</string>
+            </property>
+            <property name="flags">
+             <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+            </property>
+           </item>
+           <item row="3" column="1">
+            <property name="text">
+             <string>2</string>
+            </property>
+            <property name="flags">
+             <set>ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="10" column="0">
+          <widget class="QLabel" name="yearLabel3">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="18" column="0">
+          <widget class="QLabel" name="doomsdayCalcLabel">
+           <property name="text">
+            <string>doomsdayCalcLabel</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="centuryPatternLabel">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;First we consider the century. The doomsday for each century creates a repeating pattern. &lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="yearPatternLabel">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The next thing we do is consider the year. We increment the value by 1 for every 12 years. So 12 is 1, 24 is 2, 36 is 3, etc. &lt;/p&gt;&lt;p&gt;We then also add the difference between the year and the appropriate duodecennial, also adding 1 for every leap year passed. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="centuryLabel">
+           <property name="text">
+            <string>centuryLabel</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="0">
+          <widget class="QLabel" name="yearLabel2">
+           <property name="text">
+            <string>yearLabel</string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="0">
+          <widget class="QLabel" name="yearLabel1">
+           <property name="text">
+            <string>yearLabel</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="problemLabel">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;problemLabel&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0">
+          <widget class="QTableWidget" name="tableWidget">
+           <property name="maximumSize">
+            <size>
+             <width>290</width>
+             <height>395</height>
+            </size>
+           </property>
+           <row>
+            <property name="text">
+             <string>January</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>February</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>March</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>April</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>May</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>June</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>July</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>August</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>September</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>October</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>November</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>December</string>
+            </property>
+           </row>
+           <column>
+            <property name="text">
+             <string>month</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>date</string>
+            </property>
+           </column>
+           <item row="0" column="0">
+            <property name="text">
+             <string>1</string>
+            </property>
+           </item>
+           <item row="0" column="1">
+            <property name="text">
+             <string>3/4 (leap)</string>
+            </property>
+           </item>
+           <item row="1" column="0">
+            <property name="text">
+             <string>2</string>
+            </property>
+           </item>
+           <item row="1" column="1">
+            <property name="text">
+             <string>28/29 (leap)</string>
+            </property>
+           </item>
+           <item row="2" column="0">
+            <property name="text">
+             <string>3</string>
+            </property>
+           </item>
+           <item row="2" column="1">
+            <property name="text">
+             <string>14 (pi day)</string>
+            </property>
+           </item>
+           <item row="3" column="0">
+            <property name="text">
+             <string>4</string>
+            </property>
+           </item>
+           <item row="3" column="1">
+            <property name="text">
+             <string>4</string>
+            </property>
+           </item>
+           <item row="4" column="0">
+            <property name="text">
+             <string>5</string>
+            </property>
+           </item>
+           <item row="4" column="1">
+            <property name="text">
+             <string>9</string>
+            </property>
+           </item>
+           <item row="5" column="0">
+            <property name="text">
+             <string>6</string>
+            </property>
+           </item>
+           <item row="5" column="1">
+            <property name="text">
+             <string>6</string>
+            </property>
+           </item>
+           <item row="6" column="0">
+            <property name="text">
+             <string>7</string>
+            </property>
+           </item>
+           <item row="6" column="1">
+            <property name="text">
+             <string>11</string>
+            </property>
+           </item>
+           <item row="7" column="0">
+            <property name="text">
+             <string>8</string>
+            </property>
+           </item>
+           <item row="7" column="1">
+            <property name="text">
+             <string>8</string>
+            </property>
+           </item>
+           <item row="8" column="0">
+            <property name="text">
+             <string>9</string>
+            </property>
+           </item>
+           <item row="8" column="1">
+            <property name="text">
+             <string>5</string>
+            </property>
+           </item>
+           <item row="9" column="0">
+            <property name="text">
+             <string>10</string>
+            </property>
+           </item>
+           <item row="9" column="1">
+            <property name="text">
+             <string>10</string>
+            </property>
+           </item>
+           <item row="10" column="0">
+            <property name="text">
+             <string>11</string>
+            </property>
+           </item>
+           <item row="10" column="1">
+            <property name="text">
+             <string>7</string>
+            </property>
+           </item>
+           <item row="11" column="0">
+            <property name="text">
+             <string>12</string>
+            </property>
+           </item>
+           <item row="11" column="1">
+            <property name="text">
+             <string>12</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="aboutLabel">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The easiest way to find the day of the week follows from an algorithm devised by mathmatician John Conway, and is called the Doomsday Method.&lt;/p&gt;&lt;p&gt;It relies on knowing a couple of key facts which will allows anyone to determine the day of the week for any given date. &lt;/p&gt;&lt;p&gt;I won't be going into the specifics of the algorithm and instead will borrow some of the tips and tricks offered up by James Grime in this &lt;a href=&quot;https://www.youtube.com/watch?v=z2x3SSBVGJU&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;numberphile video&lt;/span&gt;&lt;/a&gt;. &lt;/p&gt;&lt;p&gt;You can also enjoy this 3 part explantion videos by the Mathematical Association of America presented by the John Conway himself! (&lt;a href=&quot;https://www.youtube.com/watch?v=T_nQG-Bzxsg&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;part 1&lt;/span&gt;&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/watch?v=hELMxWQQmw8&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;part 2&lt;/span&gt;&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/watch?v=mN6oA3NIiWg&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;part 3&lt;/span&gt;&lt;/a&gt;).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="16" column="0">
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The final thing to do is to find the value for the date and month. This is where the doomsday comes in. &lt;/p&gt;&lt;p&gt;Every year a set of dates have the same day of the week, and you must remember them.  A trick for the may/september, july november months are to recall the phrase 9-5 at 7/11. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="17" column="0">
+          <widget class="QLabel" name="doomsdayLabel">
+           <property name="text">
+            <string>doomsdayLabel</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QPushButton" name="pushButton">
+        <property name="geometry">
+         <rect>
+          <x>1010</x>
+          <y>990</y>
+          <width>211</width>
+          <height>111</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Try Another!</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1370</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
