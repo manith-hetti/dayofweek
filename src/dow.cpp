@@ -168,7 +168,7 @@ void DOW::changePage()
         + QString::number (date) + ".");
     ui->centuryLabel->setText(
         "Since the century is " + QString::number (century)
-        + ", we'll add " + QString::number (centuryMap[century]));   
+        + ", we'll add " + QString::number (centuryMap[century]));
     ui->yearLabel1->setText("We first add the corresponding duodecenial value: " + QString::number(duodecenial));
     if (yearDiff == 0) {
         ui->yearLabel2->setText("We have nothing else to do since the year is a multiple of 12");
