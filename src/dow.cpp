@@ -207,33 +207,26 @@ void DOW::showHelp() {
         .arg(answer).arg(QString::fromStdString(weekday))
     );
 
-    // Switch to help page
     ui->stackedWidget->setCurrentIndex(2);
 }
 
 void DOW::goBack() {
     if (!currentGame) {
-        // If no game is in progress, just go back to main menu
         ui->stackedWidget->setCurrentIndex(1);
         return;
     }
 
-    // Reduce lives
     currentGame->lostLife();
 
-    // Check if game is over
     if (currentGame->isGameOver()) {
         ui->stackedWidget->setCurrentIndex(0);
         return;
     }
 
-    // Generate new date
     currentGame->generateNewDate();
 
-    // Update display
     updateDisplay();
 
-    // Go back to main menu
     ui->stackedWidget->setCurrentIndex(1);
 }
 
