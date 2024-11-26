@@ -31,51 +31,19 @@ public:
     DOW(QWidget *parent = nullptr);
     ~DOW();
 
-    /**
-     * @brief generateDate runs the functions in dategenerator class and assigns
-     *  	  the corresponding values to year, month, date century and leap.
-     *  	  The dateLabel ui is also changed to reflect the new date.
-     * @return QString question ("What day of the week was: ... ")
-     */
-
-    /**
-     * @brief saveHighScore takes the high score value as an input
-     * 		  stores the high score value in an xml file,
-     * 		  if a xml file doesn't exist it will create one.
-     * @param highScore
-     */
-
-    /**
-     * @brief loadHighScore reads the highScore.xml file and reads the score value
-     * @return score
-     */
-
-
 private slots:
 
-    /**
-     * @brief checkWeekday checks if the button pressed by the user is equal to the correct weekday value.
-     * 		  if the input is correct the score is increased and a new date is generated
-     * 		  else the lives are reduced by 1 and a new date is generated,
-     * 		      if the lives were equal to 0 the program is closed.
-     */
     void startNormalMode();
-
-    /**
-     * @brief changePage when button is pressed the page changes to the explanation page
-     */
     void startChallengeMode();
+
     void updateTimerDisplay(int secondsLeft);
     void updateLivesDisplay(int lives);
 
-    /**
-     * @brief goBack generates a new date and returns to the original page.
-     */
-    void handleWeekdayButton();
-
     void showHelp();
     void goBack();
+
     void handleTimeExpired();
+    void handleWeekdayButton();
 
 private:
     Ui::DOW* ui;
@@ -85,4 +53,4 @@ private:
     void handleGameOver();
 
 };
-#endif // DOW_H
+#endif

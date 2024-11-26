@@ -2,6 +2,7 @@
 #include <QFile>
 #include <QXmlStreamReader>
 #include <QXmlStreamWriter>
+#include <iostream>
 
 Game::Game() : date() {
     loadHighScore();
@@ -47,7 +48,8 @@ void Game::saveHighScore() {
 
 bool Game::checkAnswer(const std::string& answer) {
     auto weekday = date.getWeekday();
-    bool correct = (std::to_string(weekday.c_encoding()) == answer);
+    std::string day_name = std::format("{}", weekday);
+    bool correct = (day_name == answer.substr(0,3));
 
     if (correct) {
         score++;

@@ -9,10 +9,6 @@
 #include "./ui_dow.h"
 #include "dategenerator.h"
 
-using namespace std;
-
-
-DateGenerator ydm;
 
 DOW::DOW(QWidget *parent)
     : QMainWindow(parent)
@@ -44,6 +40,7 @@ void DOW::setupConnections() {
 
     connect(ui->helpButton, &QPushButton::clicked, this, &DOW::showHelp);
     connect(ui->backButton, &QPushButton::clicked, this, &DOW::goBack);
+    connect(ui->goHome, &QPushButton::clicked, this, &DOW::handleGameOver);
 
 }
 
@@ -80,10 +77,10 @@ void DOW::startChallengeMode() {
 
 
     currentGame = std::move(challengeGame);
+    ui->timerLabel->setVisible(true);
     static_cast<ChallengeMode*>(currentGame.get())->startTimer();
 
     ui->stackedWidget->setCurrentIndex(1);
-    ui->timerLabel->setVisible(true);
     updateDisplay();
 }
 
@@ -118,9 +115,8 @@ void DOW::handleWeekdayButton() {
 
 void DOW::handleGameOver() {
     if (currentGame->isNewHighScore()) {
-        // Show high score message
     }
-    this->close();
+    ui->stackedWidget->setCurrentIndex(0);
 }
 
 void DOW::handleTimeExpired() {
@@ -133,7 +129,6 @@ void DOW::showHelp() {
 
     const Date& date = currentGame->getCurrentDate();
 
-    // Doomsday calculation logic (similar to your original implementation)
     int century = date.getYear() / 100;
     int year = date.getYear();
     int month = date.getMonth();

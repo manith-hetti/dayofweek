@@ -332,7 +332,7 @@
        </font>
       </property>
       <property name="text">
-       <string>timer</string>
+       <string/>
       </property>
      </widget>
      <widget class="QLabel" name="dateLabel">
@@ -351,6 +351,24 @@
       </property>
       <property name="text">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; font-weight:700;&quot;&gt;someText&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="goHome">
+      <property name="geometry">
+       <rect>
+        <x>1550</x>
+        <y>670</y>
+        <width>211</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Go Home</string>
       </property>
      </widget>
     </widget>
@@ -376,7 +394,7 @@
       <widget class="QWidget" name="scrollAreaWidgetContents">
        <property name="geometry">
         <rect>
-         <x>300</x>
+         <x>0</x>
          <y>0</y>
          <width>1964</width>
          <height>1200</height>

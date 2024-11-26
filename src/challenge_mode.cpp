@@ -1,6 +1,6 @@
 #include "challenge_mode.hpp"
 
-ChallengeMode::ChallengeMode() : Game(), remainingTime(3) {
+ChallengeMode::ChallengeMode() : Game(), remainingTime(15) {
     timer = new QTimer(this);
     timer->setInterval(1000);
     connect(timer, &QTimer::timeout, this, &ChallengeMode::updateTimer);
@@ -15,12 +15,12 @@ ChallengeMode::~ChallengeMode() {
 
 
 void ChallengeMode::startTimer() {
-    remainingTime = 3;
+    remainingTime = 15;
     timer->start();
 }
 
 void ChallengeMode::resetTimer() {
-    remainingTime = 3;
+    remainingTime = 15;
     timer->start();
 }
 
