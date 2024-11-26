@@ -12,19 +12,23 @@ set(CMAKE_AUTORCC ON)
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
-find_package(Boost REQUIRED COMPONENT math)
+find_package(Boost REQUIRED)
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
 set(LIB_SOURCES
     src/date.cpp
     src/dategenerator.cpp
+    src/game.cpp
+    src/challenge_mode.cpp
     src/dow.cpp
 )
 
 set(LIB_HEADERS
     include/Date.hpp
     include/dategenerator.h
+    include/game.hpp
+    include/challenge_mode.hpp
     include/dow.h
 )
 

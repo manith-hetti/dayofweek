@@ -16,6 +16,8 @@
 #include <QXmlStreamWriter>
 #include <QStringView>
 #include <QAbstractScrollArea>
+#include "game.hpp"
+#include "challenge_mode.hpp"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class DOW; }
@@ -35,7 +37,6 @@ public:
      *  	  The dateLabel ui is also changed to reflect the new date.
      * @return QString question ("What day of the week was: ... ")
      */
-    QString generateDate();
 
     /**
      * @brief saveHighScore takes the high score value as an input
@@ -43,13 +44,12 @@ public:
      * 		  if a xml file doesn't exist it will create one.
      * @param highScore
      */
-    void saveHighScore(int highScore);
 
     /**
      * @brief loadHighScore reads the highScore.xml file and reads the score value
      * @return score
      */
-    int loadHighScore();
+
 
 private slots:
 
@@ -59,27 +59,30 @@ private slots:
      * 		  else the lives are reduced by 1 and a new date is generated,
      * 		      if the lives were equal to 0 the program is closed.
      */
-    void checkWeekday();
+    void startNormalMode();
 
     /**
      * @brief changePage when button is pressed the page changes to the explanation page
      */
-    void changePage();
+    void startChallengeMode();
+    void updateTimerDisplay(int secondsLeft);
+    void updateLivesDisplay(int lives);
 
     /**
      * @brief goBack generates a new date and returns to the original page.
      */
+    void handleWeekdayButton();
+
+    void showHelp();
     void goBack();
+    void handleTimeExpired();
 
 private:
-    Ui::DOW *ui;
-    int lives;
-    int score;
-    int highScore;
-    int year;
-    int century;
-    int month;
-    int date;
-    bool leap;
+    Ui::DOW* ui;
+    std::unique_ptr<Game> currentGame;
+    void setupConnections();
+    void updateDisplay();
+    void handleGameOver();
+
 };
 #endif // DOW_H
