@@ -6,34 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1370</width>
-    <height>903</height>
+    <width>1980</width>
+    <height>1080</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>DOW</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="dateLabel">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>521</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; font-weight:700;&quot;&gt;someText&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-   </widget>
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>60</y>
-      <width>1246</width>
-      <height>1000</height>
+      <y>0</y>
+      <width>1980</width>
+      <height>1080</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -48,6 +35,62 @@
     <property name="currentIndex">
      <number>1</number>
     </property>
+    <widget class="QWidget" name="HomePage">
+     <widget class="QPushButton" name="ChallengeModeButton">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>450</y>
+        <width>300</width>
+        <height>200</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Challenge</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="NormalModeButton">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>200</y>
+        <width>300</width>
+        <height>200</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Normal</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="title">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>80</y>
+        <width>291</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Day of The Week Quiz</string>
+      </property>
+     </widget>
+    </widget>
     <widget class="QWidget" name="page">
      <property name="enabled">
       <bool>true</bool>
@@ -61,11 +104,16 @@
      <widget class="QPushButton" name="monday">
       <property name="geometry">
        <rect>
-        <x>370</x>
-        <y>70</y>
+        <x>730</x>
+        <y>250</y>
         <width>211</width>
         <height>111</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Monday</string>
@@ -74,11 +122,16 @@
      <widget class="QPushButton" name="tuesday">
       <property name="geometry">
        <rect>
-        <x>650</x>
-        <y>70</y>
+        <x>1050</x>
+        <y>250</y>
         <width>211</width>
         <height>111</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Tuesday</string>
@@ -87,11 +140,16 @@
      <widget class="QPushButton" name="wednesday">
       <property name="geometry">
        <rect>
-        <x>370</x>
-        <y>210</y>
+        <x>730</x>
+        <y>390</y>
         <width>211</width>
         <height>111</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Wednesday</string>
@@ -100,11 +158,16 @@
      <widget class="QPushButton" name="thursday">
       <property name="geometry">
        <rect>
-        <x>650</x>
-        <y>200</y>
+        <x>1050</x>
+        <y>390</y>
         <width>211</width>
         <height>111</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Thursday</string>
@@ -113,11 +176,16 @@
      <widget class="QPushButton" name="friday">
       <property name="geometry">
        <rect>
-        <x>370</x>
-        <y>340</y>
+        <x>730</x>
+        <y>530</y>
         <width>211</width>
         <height>111</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Friday</string>
@@ -126,11 +194,16 @@
      <widget class="QPushButton" name="sunday">
       <property name="geometry">
        <rect>
-        <x>370</x>
-        <y>470</y>
+        <x>730</x>
+        <y>670</y>
         <width>211</width>
         <height>111</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Sunday</string>
@@ -139,11 +212,16 @@
      <widget class="QPushButton" name="helpButton">
       <property name="geometry">
        <rect>
-        <x>650</x>
-        <y>470</y>
+        <x>1050</x>
+        <y>670</y>
         <width>211</width>
         <height>111</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Help!</string>
@@ -152,11 +230,16 @@
      <widget class="QPushButton" name="saturday">
       <property name="geometry">
        <rect>
-        <x>650</x>
-        <y>340</y>
+        <x>1050</x>
+        <y>530</y>
         <width>211</width>
         <height>111</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Saturday</string>
@@ -165,24 +248,34 @@
      <widget class="QLabel" name="highScoreLabel">
       <property name="geometry">
        <rect>
-        <x>960</x>
-        <y>20</y>
-        <width>181</width>
-        <height>41</height>
+        <x>1550</x>
+        <y>80</y>
+        <width>180</width>
+        <height>40</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>highScore</string>
       </property>
      </widget>
      <widget class="QLabel" name="livesLabel">
       <property name="geometry">
        <rect>
-        <x>960</x>
-        <y>80</y>
+        <x>1550</x>
+        <y>140</y>
         <width>171</width>
         <height>41</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>lives</string>
@@ -191,11 +284,16 @@
      <widget class="QLabel" name="scoreLabel">
       <property name="geometry">
        <rect>
-        <x>960</x>
-        <y>140</y>
+        <x>1550</x>
+        <y>200</y>
         <width>161</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>score </string>
@@ -204,14 +302,73 @@
      <widget class="QLabel" name="userResponse">
       <property name="geometry">
        <rect>
-        <x>960</x>
-        <y>500</y>
-        <width>171</width>
+        <x>910</x>
+        <y>850</y>
+        <width>231</width>
         <height>41</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="timerLabel">
+      <property name="geometry">
+       <rect>
+        <x>1550</x>
+        <y>260</y>
+        <width>201</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="dateLabel">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>80</y>
+        <width>521</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>22</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt; font-weight:700;&quot;&gt;someText&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="goHome">
+      <property name="geometry">
+       <rect>
+        <x>1550</x>
+        <y>670</y>
+        <width>211</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Go Home</string>
       </property>
      </widget>
     </widget>
@@ -225,10 +382,10 @@
      <widget class="QScrollArea" name="scrollArea">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>60</y>
-        <width>1251</width>
-        <height>791</height>
+        <x>40</x>
+        <y>30</y>
+        <width>1980</width>
+        <height>1080</height>
        </rect>
       </property>
       <property name="widgetResizable">
@@ -238,8 +395,8 @@
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>-411</y>
-         <width>1235</width>
+         <y>0</y>
+         <width>1964</width>
          <height>1200</height>
         </rect>
        </property>
@@ -254,11 +411,14 @@
          <rect>
           <x>60</x>
           <y>30</y>
-          <width>945</width>
+          <width>1053</width>
           <height>1071</height>
          </rect>
         </property>
         <layout class="QGridLayout" name="gridLayout">
+         <property name="leftMargin">
+          <number>50</number>
+         </property>
          <item row="19" column="0">
           <widget class="QLabel" name="answerLabel">
            <property name="text">
@@ -655,17 +815,22 @@
          </item>
         </layout>
        </widget>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="backButton">
         <property name="geometry">
          <rect>
-          <x>1010</x>
-          <y>990</y>
+          <x>1150</x>
+          <y>850</y>
           <width>211</width>
           <height>111</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+         </font>
+        </property>
         <property name="text">
-         <string>Try Another!</string>
+         <string>Try New Date</string>
         </property>
        </widget>
       </widget>
@@ -678,8 +843,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1370</width>
-     <height>21</height>
+     <width>1980</width>
+     <height>22</height>
     </rect>
    </property>
   </widget>

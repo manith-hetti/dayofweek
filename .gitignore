@@ -8,6 +8,8 @@
 *.so.*
 *.dll
 *.dylib
+*.cmake
+*.xml
 
 object_script.*.Release
 object_script.*.Debug
@@ -50,5 +52,10 @@ CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
 Makefile
+.cmake/
+.idea/
+.qtcreator/
+Testing/
+dayofweek
 
 /dayofweek_autogen/

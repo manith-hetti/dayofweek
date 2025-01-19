@@ -1,51 +1,75 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.27)
 
-project(DayOfWeek VERSION 0.1 LANGUAGES CXX)
+project(DayOfWeek VERSION 0.5 LANGUAGES CXX)
 
+enable_testing()
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
+find_package(Boost REQUIRED)
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
-set(PROJECT_SOURCES
-    ${PROJECT_SOURCE_DIR}/src/main.cpp
-    ${PROJECT_SOURCE_DIR}/src/dow.cpp
-    ${PROJECT_SOURCE_DIR}/src/dow.ui
-    ${PROJECT_SOURCE_DIR}/include/dow.h
-    ${PROJECT_SOURCE_DIR}/src/dategenerator.cpp
-    ${PROJECT_SOURCE_DIR}/include/dategenerator.h
+set(LIB_SOURCES
+    src/date.cpp
+    src/dategenerator.cpp
+    src/game.cpp
+    src/challenge_mode.cpp
+    src/dow.cpp
+)
+
+set(LIB_HEADERS
+    include/Date.hpp
+    include/dategenerator.h
+    include/game.hpp
+    include/challenge_mode.hpp
+    include/dow.h
+)
+
+add_library(DayOfWeekLib STATIC
+    ${LIB_SOURCES}
+    ${LIB_HEADERS}
+    src/dow.ui
+)
+
+target_include_directories(DayOfWeekLib PUBLIC
+    ${PROJECT_SOURCE_DIR}/include
+)
+
+target_link_libraries(DayOfWeekLib PUBLIC
+    Qt${QT_VERSION_MAJOR}::Widgets
+    boost::boost
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(dayofweek
         MANUAL_FINALIZATION
-        ${PROJECT_SOURCES}
+        src/main.cpp
     )
-
 else()
     if(ANDROID)
         add_library(dayofweek SHARED
-            ${PROJECT_SOURCES}
+            src/main.cpp
         )
     else()
         add_executable(dayofweek
-            ${PROJECT_SOURCES}
+            src/main.cpp
         )
     endif()
 endif()
 
-target_link_libraries(dayofweek PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(dayofweek PRIVATE DayOfWeekLib)
 
 if(${QT_VERSION} VERSION_LESS 6.1.0)
-  set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.dayofweek)
+    set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.dayofweek)
 endif()
+
 set_target_properties(dayofweek PROPERTIES
     ${BUNDLE_ID_OPTION}
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
@@ -69,3 +93,5 @@ add_custom_target(clean-all
     COMMAND ${CMAKE_COMMAND} -E rm -rf ${CMAKE_BINARY_DIR}/*
     COMMENT "Cleaning all build files..."
 )
+
+add_subdirectory(tests)
